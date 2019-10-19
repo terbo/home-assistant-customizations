@@ -54,6 +54,7 @@ def get_scanner(hass, config):
     return KismetDeviceScanner(hass, config[DOMAIN])
 
 
+DeviceGPS = namedtuple('Device', ['mac', 'last_ssid', 'gps', 'last_update'])
 Device = namedtuple('Device', ['mac', 'last_ssid', 'last_update'])
 
 class KismetDeviceScanner(DeviceScanner):
